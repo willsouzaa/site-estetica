@@ -89,6 +89,7 @@ body {
 }
 
 
+
 /* Seção Home */
 #home {
     background: linear-gradient(135deg, #f7f7f7 30%, #ffffff 100%);
@@ -120,13 +121,12 @@ body {
 }
 
 #home h1 {
-    font-family: 'Dancing Script', cursive;
     font-size: 2.8rem; /* Aumentar o tamanho para dar mais destaque */
     line-height: 1.3;
     color: #333; /* Cor mais escura para contraste */
     margin-bottom: 2rem;
     text-align: left;
-    font-weight: 700;
+    font-weight: 70;
     letter-spacing: 1px;
 }
 
@@ -164,7 +164,6 @@ body {
     }
 
     #home h1 {
-        font-size: 2.2rem;
         text-align: center;
     }
 
@@ -187,7 +186,6 @@ body {
     }
 
     #home h1 {
-        font-size: 1.9rem;
         margin-bottom: 3rem;
         margin-top: -1rem;
     }
@@ -368,37 +366,17 @@ body {
     margin-bottom: 3rem;
 }
 
-.card {
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-}
-
-.card-body {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-size: 1.5rem;
+.procedures-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.2rem;
     color: #343a40;
-    margin-bottom: 1rem;
 }
 
-.card-text {
-    font-size: 1rem;
-    color: #6c757d;
+.procedures-list li {
+    margin: 0.5rem 0;
+    font-weight: 600;
 }
 
 .btn {
@@ -415,35 +393,6 @@ body {
 .btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
-    #sobre-clinica .section-title {
-        font-size: 2.2rem;
-    }
-
-    .card-body {
-        padding: 1rem;
-    }
-
-    .card-img-top {
-        height: 200px;
-    }
-}
-
-@media (max-width: 576px) {
-    #sobre-clinica .section-title {
-        font-size: 1.8rem;
-    }
-
-    .card-body {
-        padding: 0.8rem;
-    }
-
-    .card-img-top {
-        height: 180px;
-    }
 }
 
 
