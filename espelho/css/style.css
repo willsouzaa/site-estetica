@@ -3,6 +3,10 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Dancing Script', cursive;
+    }
+    
 }
 
 /* Barra de Navegação */
@@ -178,7 +182,7 @@ body {
     }
 
     #home img {
-        max-width: 7%;
+        max-width: 70%;
         margin: 0 auto;
     }
 
@@ -202,14 +206,14 @@ body {
 
 /* Estilo da seção sobre a profissional */
 #sobre-profissional {
-    background-color: #f8f9fa;
+    background-color: #f1f1f1;
     padding: 6rem 0;
 }
 
 #sobre-profissional .section-title {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    color: #343a40;
+    color: #333;
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: 1px;
@@ -219,7 +223,7 @@ body {
 #sobre-profissional .lead {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #555;
+    color: #333;
     margin-bottom: 1.5rem;
     text-align: justify;
 }
