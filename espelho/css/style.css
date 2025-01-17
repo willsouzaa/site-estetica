@@ -110,12 +110,14 @@ body {
 }
 
 #home h1 {
+    font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
     line-height: 1.4;
     color: #555;
     margin-bottom: 1.5rem;
     text-align: left;
 }
+
 
 #home h1 span {
     color: #007bff;
