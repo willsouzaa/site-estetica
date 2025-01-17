@@ -102,11 +102,10 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #home .logo-img {
-    max-width: 150px;
+    max-width: 500px;
     margin: 0 auto 1rem;
 }
 
@@ -156,9 +155,11 @@ body {
     }
 
     #home .logo-img {
-        margin: 0 auto;
+        max-width: 250px; /* Aumenta o tamanho da logo */
+        margin: 0 auto 1rem;
     }
 }
+
 
 /* Responsividade para telas menores */
 @media (max-width: 576px) {
@@ -170,6 +171,7 @@ body {
     #home img {
         max-width: 100%;
         margin-bottom: 1rem;
+        margin-top: 2rem;
     }
 
     #home h1 {
@@ -178,9 +180,9 @@ body {
     }
 
     #home .logo-img {
+        max-width: 300px; /* Ajusta o tamanho para telas pequenas */
         margin-bottom: 0.5rem;
     }
-
     #home a {
         font-size: 1rem;
         padding: 8px 20px;
