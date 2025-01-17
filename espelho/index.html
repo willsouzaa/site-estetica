@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 <!-- Barra de Navegação -->
@@ -120,24 +124,107 @@
 <!-- Galeria de Fotos -->
 <section class="container py-5" id="fotos">
     <h2 class="text-center mb-4 text-uppercase font-weight-bold" style="color: #6c757d;">Nosso Espaço</h2>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <img src="imagens/espaço1.jpg" alt="Espaço 1" class="img-fluid rounded shadow">
+    <div id="galeriaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/espaço1.jpg" alt="Espaço 1" class="d-block w-100 img-fluid rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/espaço2.jpg" alt="Espaço 2" class="d-block w-100 img-fluid rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/espaço3.jpg" alt="Espaço 3" class="d-block w-100 img-fluid rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/espaço4.jpg" alt="Espaço 4" class="d-block w-100 img-fluid rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/espaço5.jpg" alt="Espaço 5" class="d-block w-100 img-fluid rounded">
+            </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <img src="imagens/espaço2.jpg" alt="Espaço 2" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-4 mb-4">
-            <img src="imagens/espaço3.jpg" alt="Espaço 3" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-4 mb-4">
-            <img src="imagens/espaço4.jpg" alt="Espaço 4" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-4 mb-4">
-            <img src="imagens/espaço5.jpg" alt="Espaço 5" class="img-fluid rounded shadow">
+        <!-- Controles do carrossel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
     </div>
 </section>
+
+<!-- Botão do WhatsApp -->
+<a href="https://wa.me/5548999999999" target="_blank" class="whatsapp-button">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Seção de Avaliações -->
+<section id="avaliacoes" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">O que nossos clientes dizem</h2>
+        <div class="row">
+            <!-- Avaliação 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="card-text">"A clínica é incrível! Atendimento impecável e resultados excelentes. Recomendo a todos!"</p>
+                        <h6 class="card-subtitle text-muted">- Maria Santos</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Avaliação 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                        </div>
+                        <p class="card-text">"Equipe profissional e ambiente acolhedor. Estou muito satisfeita com os resultados."</p>
+                        <h6 class="card-subtitle text-muted">- Ana Oliveira</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Avaliação 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="card-text">"Serviço excelente e um ambiente que faz você se sentir especial. Nota 10!"</p>
+                        <h6 class="card-subtitle text-muted">- João Carvalho</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 <!-- Rodapé -->
@@ -154,7 +241,7 @@
         <div class="row mb-4">
             <div class="col-md-4">
                 <h5>WhatsApp</h5>
-                <p>(48) 99999-6833</p>
+                <p>(48) 99999-9999</p>
             </div>
             <div class="col-md-4">
                 <h5>Siga-nos nas Redes Sociais</h5>
@@ -177,18 +264,19 @@
             </div>
             <div class="col-md-6">
                 <h5>Endereço</h5>
-                <p>Rua Joaquim José Santana, 157, Tijucas, Santa Catarina, BR</p>
+                <p>Rua valdemar vieira, 157, Palhoça, Santa Catarina, BR</p>
             </div>
         </div>
 
         <!-- Direitos Autorais -->
         <div class="row">
             <div class="col-12">
-                <p>&copy; 2024 - Todos os direitos reservados - Desenvolvido por Ydeal Tecnologia</p>
+                <p>&copy; 2024 - Todos os direitos reservados - Desenvolvido por <a href="https://pauloamancio.com.br" target="_blank">Pauloamancio.com.br</a></p>
             </div>
         </div>
     </div>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>

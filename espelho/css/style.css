@@ -253,11 +253,10 @@ body {
   animation: slideInRight 1s ease-in-out;
 }
 
-/* Estilo da galeria de fotos */
+/* Estilo da seção de fotos */
 #fotos {
     background-color: #e1e1e1;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
 }
 
 #fotos h2 {
@@ -266,20 +265,36 @@ body {
     color: #343a40;
 }
 
-#fotos .img-fluid {
+.carousel-inner img {
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#fotos .img-fluid:hover {
+.carousel-inner img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 767px) {
-    #fotos h2 {
-        font-size: 2rem;
-    }
+/* Controles do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
+
+/* Indicadores personalizados */
+.carousel-indicators button {
+    background-color: #007bff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #0056b3;
+}
+
 
 footer {
     background-color: #f8f9fa;
@@ -315,3 +330,45 @@ footer a:hover {
     }
 }
 
+/* Botão Flutuante do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Torna o botão redondo */
+    background-color: #25d366; /* Cor verde oficial do WhatsApp */
+    color: white; /* Cor do ícone */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 28px; /* Tamanho do ícone */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Ampliação no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    background-color: #20c659; /* Cor verde mais escura no hover */
+}
+
+.whatsapp-button i {
+    color: white; /* Ícone branco */
+}
+
+#avaliacoes {
+    background-color: #f9f9f9;
+}
+.card-text {
+    font-style: italic;
+    color: #555;
+}
+.card-subtitle {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
