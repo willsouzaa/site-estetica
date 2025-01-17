@@ -1,0 +1,290 @@
+/* Estilo moderno para a barra de navegação */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegação */
+.navbar {
+    background-color: #ffffff; /* Branco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    padding: 0.8rem 1.5rem;
+}
+
+/* Marca da Navegação */
+.navbar a.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #444; /* Cinza escuro */
+    transition: color 0.3s ease;
+}
+
+.navbar a.navbar-brand:hover {
+    color: #007bff; /* Azul */
+    text-decoration: none;
+}
+
+/* Links da Navegação */
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-right: 15px;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Azul ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* Linha Subjacente */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Alterar cor e sombra ao rolar */
+.navbar.scrolled {
+    background-color: #f8f9fa; /* Tom mais claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 0.6rem 1.5rem;
+    transition: all 0.4s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+}
+
+
+/* Estilo para a seção HOME */
+/* Seção Home */
+#home {
+    background: linear-gradient(135deg, #e1e1e1 30%, #ffffff 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: #555;
+    animation: fadeInUp 1.6s;
+}
+
+#home h1 span {
+    color: #007bff;
+}
+
+#home .logo-img {
+    max-width: 50%;
+    animation: bounceIn 2s;
+}
+
+/* Botão personalizado */
+#home a {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#home a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Estado inicial */
+.wow {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+/* Quando visível */
+.wow.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Faixa de Procedimentos */
+.procedimentos {
+    background: linear-gradient(135deg, #c0c0c0, #f8f8f8);
+  }
+  
+  .procedimentos h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .procedimentos h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 10px auto 0;
+  }
+  
+  .procedimentos .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .procedimentos .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .procedimentos .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+/* Animação Slide-In com Rotação */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px) rotate(5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.procedimentos .card {
+  animation: slideInRight 1s ease-in-out;
+  animation-delay: calc(var(--delay, 0) * 0.3s);
+  opacity: 0;
+  transform: translateX(50px) rotate(5deg);
+}
+
+.procedimentos .card.appear {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+  animation: slideInRight 1s ease-in-out;
+}
+
+/* Estilo da galeria de fotos */
+#fotos {
+    background-color: #e1e1e1;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#fotos h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #343a40;
+}
+
+#fotos .img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#fotos .img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767px) {
+    #fotos h2 {
+        font-size: 2rem;
+    }
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    footer h5 {
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
