@@ -302,10 +302,12 @@ body {
 }
 
 .procedimentos .card img {
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Mantém a altura uniforme */
+    object-fit: contain; /* Garante que toda a imagem fique visível */
+    background-color: #f8f9fa; /* Cor de fundo para áreas vazias */
     border-radius: 20px 20px 0 0; /* Bordas arredondadas no topo da imagem */
 }
+
 
 /* Responsividade: Para telas médias (tablets) */
 @media (max-width: 992px) {
@@ -398,49 +400,53 @@ body {
 /* Estilo da seção de fotos */
 #fotos {
     background-color: #e1e1e1;
-    padding: 50px 0; /* Menos padding para reduzir o tamanho geral da seção */
+    padding: 50px 0;
 }
 
 #fotos h2 {
-    font-size: 2rem; /* Reduzido o tamanho do título */
+    font-size: 2rem;
     letter-spacing: 0.5px;
     color: #343a40;
-    margin-bottom: 20px; /* Menor espaçamento inferior */
+    margin-bottom: 20px;
 }
 
 .carousel-inner img {
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 600px; /* Reduzido o tamanho das imagens */
-    object-fit: cover; /* Garante que as imagens se ajustem bem */
+    border-radius: 10px; /* Bordas arredondadas */
+    height: 500px; /* Altura fixa para uniformidade */
+    width: 100%; /* Preenche a largura do container */
+    object-fit: contain; /* Garante que toda a imagem seja visível */
+    background-color: #f8f9fa; /* Cor de fundo para áreas extras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
 }
 
 .carousel-inner img:hover {
-    transform: scale(1.03); /* Menos zoom no hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    transform: scale(1.03); /* Pequeno zoom ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais evidente */
 }
+
 
 /* Controles do carrossel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    width: 30px; /* Controles menores */
+    width: 30px;
     height: 30px;
 }
 
 /* Indicadores personalizados */
 .carousel-indicators button {
     background-color: #007bff;
-    width: 8px; /* Indicadores menores */
+    width: 8px;
     height: 8px;
     border-radius: 50%;
-    margin: 0 4px; /* Menor espaçamento */
+    margin: 0 4px;
 }
 
 .carousel-indicators .active {
     background-color: #0056b3;
 }
+
 
 /* Estilização para evitar quebras de linha em telas menores */
 #avaliacoes .card {
